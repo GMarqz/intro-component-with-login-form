@@ -1,0 +1,119 @@
+
+.information__head {
+    margin: 5.5rem 1.5rem 1rem 1.5rem;
+    color: var(--white);
+    text-align: center;
+    font-size: 1.75rem;
+    font-weight: 700;
+    line-height: 2.25rem;
+    letter-spacing: -0.01825rem;
+}
+
+.information__content {
+    margin: 0 1.5rem 4rem 1.5rem;
+    color: var(--white);
+    text-align: center;
+    font-family: var(--font);
+    font-weight: 500;
+    line-height: 1.625rem;
+}
+
+.container__free__trial-button {
+    width: 20.4375rem;
+    height: 5.5rem;
+    margin: auto 1.5rem 1.5rem 1.5rem;
+    padding: 1.13rem 4.12rem 1.13rem 4.19rem;
+
+    border-radius: 0.625rem;
+    border: none;
+    background: var(--accent);
+    box-shadow: 0px 8px 0px 0px rgba(0, 0, 0, 0.15);
+}
+
+.free__trial__content {
+    width: 12.125rem;
+
+    color: var(--white);
+    text-align: center;
+    font-size: 0.9375rem;
+    font-weight: 400;
+    line-height: 1.625rem;
+    letter-spacing: 0.01675rem;
+}
+
+.free__trial__content-strong {
+    font-weight: 700;
+}
+
+.container__div {
+    width: 20.4375rem;
+    height: 27.625rem;
+    margin: auto 1.5rem auto 1.5rem;
+    padding: 1.5rem;
+
+    border-radius: 0.625rem;
+    background: var(--white);
+    box-shadow: 0px 8px 0px 0px rgb(0, 0, 0, 0.15);
+}
+
+input {
+    width: 17.4375rem;
+    height: 3.5rem;
+    margin-bottom: 1rem;
+    border-radius: 0.3125rem;
+    border: 1px solid var(--input-border);
+    background: var(--white);
+
+    color: var(--accent);
+    font-weight: 600;
+    line-height: 1.625rem;
+    letter-spacing: 0.01563rem;
+    font-family: var(--font);
+}
+
+input::before {
+    content: attr(placeholder);
+    position: absolute;
+    top: 50%;
+    left: 10px; /* Ajuste conforme necessário */
+    color: var(--accent);
+    opacity: 0.75;
+    transform: translateY(-50%);
+    pointer-events: none; /* Permite clicar e interagir com o input abaixo */
+}
+
+.container__div__btn {
+    width: 17.4375rem;
+    height: 3.5rem;
+
+    border-radius: 0.3125rem;
+    background: var(--green);
+    box-shadow: 0px -4px 0px 0px rgba(0, 0, 0, 0.9) inset;
+}
+
+.container__div__btn-content {
+    /* margin: auto 2.44rem 1.5rem 2.44rem; */
+    color: var(--white);
+    text-align: center;
+    font-family: var(--font);
+    font-size: 0.9375rem;
+    font-weight: 600;
+    line-height: 1.625rem;
+    letter-spacing: 0.0625rem;
+    text-transform: uppercase;
+}
+
+.container__div__condition {
+    color: var(--terms-color);
+    text-align: center;
+    font-size: 0.6875rem;
+    font-weight: 500;
+    line-height: 1.3125rem;
+}
+
+span {
+    color: var(--main-color);
+    font-size: 0.6875rem;
+    font-weight: 700;
+    line-height: 1.3125rem;
+}
