@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 @import url(./style/mobile.css);
+@import url(/style/desktop.css);
 
 :root{
     --main-color: #ff7979;
@@ -27,4 +28,12 @@ body {
     background-repeat: no-repeat;
     font-family: var(--font);
     font-size: 1rem;
+}
+
+@media screen and (min-width: 1280px) {
+    body {
+        padding: 3rem;
+        flex-direction: row;
+        background-image: url(/images/bg-intro-desktop.png);
+    }
 }
