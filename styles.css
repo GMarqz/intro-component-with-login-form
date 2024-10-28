@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
-@import url(./style/mobile.css);
-@import url(/style/desktop.css);
+@import url(./style/header.css);
+@import url(./style/form.css);
+@import url(./style/button.css);
+
 
 :root{
     --main-color: #ff7979;
@@ -23,40 +25,37 @@
 body {
     max-width: 100%;
     height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
     background-color: var(--main-color);
-
-    
+    font-family: var(--font);
+    font-size: 1rem;
+    background-image: url(./images/bg-intro-mobile.png);
+    background-repeat: no-repeat;
 }
 
 main {
-    padding-top: 5.5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-family: var(--font);
-    font-size: 1rem;
-    gap: 2.5rem;
-
-    background-image: url(./images/bg-intro-mobile.png);
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
-/* Adicionar background repeat pro background mobile quando a tela começar a ficar maior porém menor do que 1200
-ou ver se width: 100% funciona */
+@media screen and (min-width: 400px){
+    body {
+        background-repeat: repeat;
+    }
+}
 
 @media screen and (min-width: 1280px) {
     body {
-        /* padding: 3rem; */
-        flex-direction: row;
-        /* background-image: url(/images/bg-intro-desktop.png); */
-    }
-    main {
+        display: flex;
         flex-direction: row;
     }
 
-    .container__free__trial-button {
-        width: 90%;
-        height: 9vh;
+    /* Use flexbox to ajust header and main position instead of using margin-top */
+
+    main {
+        margin-top: 7.563rem;
     }
 }
