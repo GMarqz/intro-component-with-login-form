@@ -1,3 +1,5 @@
+/* Add flex classes to styles.css so I can just use their class name on the html element instead of putting 'display: flex' everywhere */
+
 .information__container {
     display: flex;
     flex-direction: column;
@@ -32,10 +34,10 @@
 }
 
 .container__free__trial-button {
-    width: 20.4375rem;
-    height: 5.5rem;
+    max-width: 90%;
+    /* height: 5.5rem; */
     margin: auto 1.5rem 1.5rem 1.5rem;
-    padding: 0 4rem;
+    padding: 1.125rem 4.188rem;
 
     border-radius: 0.625rem;
     border: none;
@@ -85,16 +87,18 @@ input::before {
     content: attr(placeholder);
     position: absolute;
     top: 50%;
-    left: 10px; /* Ajuste conforme necessário */
+    left: 10px;
     color: var(--accent);
     opacity: 0.75;
     transform: translateY(-50%);
-    pointer-events: none; /* Permite clicar e interagir com o input abaixo */
+    pointer-events: none;
 }
 
 .container__div__btn {
-    width: 17.4375rem;
-    height: 3.5rem;
+    width: 100%;
+    /* width: 17.4375rem; */
+    /* height: 3.5rem; */
+    padding: 0.938rem 2.813rem;
     border: none;
     border-radius: 0.3125rem;
     background: var(--green);
