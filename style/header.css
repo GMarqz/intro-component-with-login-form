@@ -1,0 +1,45 @@
+.information__container {
+    margin-top: 5.5rem;
+    display: flex;
+    flex-direction: column;
+    padding: 0 1.5rem;
+}
+
+.information__head {
+    color: var(--white);
+    text-align: center;
+    font-size: 1.75rem;
+    font-weight: 700;
+    line-height: 2.25rem;
+    letter-spacing: -0.01825rem;
+    text-shadow: 2px 3px 4px rgba(0, 0, 0, 0.25);
+}
+
+.information__content {
+    padding: 1.5rem 0;
+    color: var(--white);
+    text-align: center;
+    font-family: var(--font);
+    font-weight: 500;
+    line-height: 1.625rem;
+}
+
+@media screen and (min-width: 1280px) {
+    .information__container {
+        width: 50%;
+        padding: 5rem;
+    }
+
+    .information__head {
+        font-size: 3.125rem;
+        letter-spacing: -0.033;
+        line-height: 3.438rem;
+        text-shadow: none;
+    }
+
+    .information__content {
+        width: 32.812rem;
+        font-size: 1rem;
+        line-height: 1.625rem;
+    }
+}
