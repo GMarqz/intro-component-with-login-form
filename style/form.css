@@ -42,6 +42,17 @@ input::before {
     pointer-events: none;
 }
 
+input:required:focus:valid {
+    background: url("https://assets.digitalocean.com/labs/icons/hand-thumbs-up.svg") no-repeat 95% 50% lightgreen;
+    background-size: 25px;
+
+}
+
+input:focus:invalid {
+    background: url(../images/icon-error.svg) no-repeat 95% 50% lightsalmon;
+    background-size: 25px;
+}
+
 .container__div__terms-agreement {
     padding: 1rem 2.5rem 0 2.5rem;
     color: var(--terms-color);
