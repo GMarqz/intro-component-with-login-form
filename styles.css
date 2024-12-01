@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
-@import url(./style/header.css);
-@import url(./style/form.css);
-@import url(./style/button.css);
+@import url(../style/header.css);
+@import url(../style/form.css);
+@import url(../style/button.css);
 
 
 :root{
@@ -51,11 +51,10 @@ main {
     body {
         display: flex;
         flex-direction: row;
+        align-items: center;
     }
 
-    /* Use flexbox to ajust header and main position instead of using margin-top */
-
     main {
-        margin-top: 7.563rem;
+        margin-top: 4rem;
     }
 }

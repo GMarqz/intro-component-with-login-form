@@ -19,15 +19,34 @@
                     $20/mo. thereafter</p>
             </button>
             <div class="container__div">
-                <form>
-                    <input type="text" id="fname" name="fname" placeholder="First name" required /><br>
-                    <input type="text" id="lname" name="lname" placeholder="Last name" required /><br>
-                    <input type="email" id="email" name="email" placeholder="Email" required /><br>
-                    <input type="password" id="password" name="password" placeholder="Password" required />
+                <form class="form">
+                    <fieldset class="form-field">
+                        <input type="text" id="fname" name="fname" placeholder="First name" minlength="3" required />
+                        <span class="invalid-message"></span>
+                    </fieldset>
+
+                    <fieldset class="form-field">
+                        <input type="text" id="lname" name="lname" placeholder="Last name" minlength="3" required />
+                        <span class="invalid-message"></span>
+                    </fieldset>
+
+                    <fieldset class="form-field">
+                        <input type="email" id="email" name="email" placeholder="Email" minlength="4" required />
+                        <span class="invalid-message"></span>
+                    </fieldset>
+
+                    <fieldset class="form-field">
+                        <input type="password" id="password" name="password" placeholder="Password" minlength="8"
+                        required />
+                        <span class="invalid-message"></span>
+                    </fieldset>
+
+
+                    <input type="submit" id="submit" name="submit" placeholder="Claim your free trial" />
                 </form>
-                <button class="container__div__btn">
+                <!-- <button class="container__div__btn">
                     <p class="container__div__btn-content">Claim your free trial</p>
-                </button>
+                </button> -->
                 <div class="container__div__terms-agreement">
                     <small class="container__div__terms-agreement-small">By clicking the button, you are agreeing to our
                         <span>Terms and Services</span></small>
@@ -35,6 +54,6 @@
             </div>
         </section>
     </main>
-    <script src="./index.js" type="module"></script>
+    <script src="./dist/js/index.js" type="module"></script>
 </body>
 </html>
