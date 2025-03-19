@@ -1,0 +1,18 @@
+.form-field-name {
+    border: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
+.fname-input:invalid:not(:placeholder-shown) {
+    outline: 2px solid red;
+
+}
+
+.invalid-message-fname {
+    font-weight: 500;
+    font-style: italic;
+    font-size: 0.688rem;
+    letter-spacing: 0px;
+}
