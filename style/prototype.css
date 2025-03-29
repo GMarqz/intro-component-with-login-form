@@ -7,12 +7,29 @@
 
 .fname-input:invalid:not(:placeholder-shown) {
     outline: 2px solid red;
-
+    
 }
 
-.invalid-message-fname {
+
+.fname-input:focus::placeholder {
+
+    
+}
+
+.invalid-message {
     font-weight: 500;
     font-style: italic;
     font-size: 0.688rem;
     letter-spacing: 0px;
+}
+
+.form-field-email:invalid {
+    outline: none;
+    border: 2px solid rgba(255, 121, 121, 1);
+    background: url(../images/icon-error.svg) no-repeat 95% 50%;
+    background-size: 25px;
+}
+
+.invalid-message-email {
+    
 }

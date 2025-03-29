@@ -23,30 +23,31 @@
                     $20/mo. thereafter</p>
             </button>
             <div class="container__div">
-                <form class="form">
+                <form class="form" id="form">
                     <fieldset class="form-field-name" id="form-field-name">
-                        <input class="fname-input" type="text" id="fname" name="fname" placeholder="First name"  required/>
-                        <span class="invalid-message-fname" id="invalid-message-fname"></span>
+                        <input class="fname-input" type="text" id="fname" name="fname" placeholder="First name" required/>
+                        <span class="invalid-message invalid-fname" id="invalid-message-fname"></span>
                     </fieldset>
 
                     <fieldset class="form-field">
                         <input type="text" id="lname" name="lname" placeholder="Last name" required />
-                        <span class="invalid-message"></span>
+                        <span class="invalid-message invalid-lname"></span>
                     </fieldset>
 
-                    <fieldset class="form-field">
-                        <input type="email" id="email" name="email" placeholder="Email" minlength="4" required />
-                        <span class="invalid-message"></span>
+                    <fieldset class="form-field" id="form-field-email">
+                        <input type="email" id="email" name="email" placeholder="Email" required />
+                        <span class="invalid-message invalid-email" id="invalid-message-email"></span>
                     </fieldset>
 
                     <fieldset class="form-field">
                         <input type="password" id="password" name="password" placeholder="Password" minlength="8"
                         required />
-                        <span class="invalid-message"></span>
+                        <span class="invalid-message invalid-password"></span>
                     </fieldset>
 
 
                     <input type="submit" id="submit" class="submit-btn" name="submit" value="Claim your free trial" />
+                    <!-- <button type="submit" id="submit" class="submit-btn">Claim yout free trial</button> -->
                 </form>
                 <!-- <button class="container__div__btn">
                     <p class="container__div__btn-content">Claim your free trial</p>
