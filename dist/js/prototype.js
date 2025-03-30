@@ -13,11 +13,20 @@ const $form = document.getElementById('form');
 // console.log($spanFirstName);
 function isValidName(input) {
     const userName = input.value;
-    const patternName = /^[A-Za-zÀ-ÿ -]{3,30}$/.test(userName);
+    const patternName = /^(?!(.)\1\1)[A-Za-zÀ-ÿ -]{3,30}$/i.test(userName);
     console.log(patternName);
-    if (!patternName) {
+    if (!patternName) { //Dunno how but this code is working just fine. Gotta find out the reason why its working.
         input.setCustomValidity('This name is invalid');
         console.log(`"${userName}" is not a valid name.`);
+        input.addEventListener("change", (e) => {
+            const target = e.target;
+            if (target.validity.patternMismatch) {
+                input.setCustomValidity('Nope');
+            }
+            else {
+                input.setCustomValidity('');
+            }
+        });
     }
     else {
         input.setCustomValidity('');
@@ -26,11 +35,11 @@ function isValidName(input) {
     // https://stackoverflow.com/questions/70514086/why-are-custom-validation-messages-causing-my-html-form-elements-to-stay-invalid
     return userName;
 }
-isValidName($inputFirstName);
+// isValidName($inputFirstName);
 //ABOVE FUNCTION (isValidName) IS WORKING FINE
 $form.addEventListener("submit", (e) => {
     e.preventDefault();
-    // isValidName($inputFirstName)
+    isValidName($inputFirstName);
     // input.setCustomValidity('');
     console.log(`${$inputFirstName.value}`);
     console.log(isValidName($inputFirstName));

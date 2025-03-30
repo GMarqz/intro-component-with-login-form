@@ -22,12 +22,20 @@ const $form = document.getElementById('form') as HTMLFormElement;
 
 function isValidName(input: HTMLInputElement) {
     const userName = input.value;
-    const patternName = /^[A-Za-zÀ-ÿ -]{3,30}$/.test(userName);
+    const patternName = /^(?!(.)\1\1)[A-Za-zÀ-ÿ -]{3,30}$/i.test(userName);
     console.log(patternName);
 
-        if(!patternName) {
+        if(!patternName) { //Dunno how but this code is working just fine. Gotta find out the reason why its working.
             input.setCustomValidity('This name is invalid');
             console.log(`"${userName}" is not a valid name.`);
+            input.addEventListener("change", (e: any) => {
+                const target = e.target;
+                if(target.validity.patternMismatch) {
+                    input.setCustomValidity('Nope');
+                } else {
+                    input.setCustomValidity('');
+                }
+            })
         } else {
             input.setCustomValidity('');
         }
@@ -40,14 +48,14 @@ function isValidName(input: HTMLInputElement) {
     return userName;
 }
 
-isValidName($inputFirstName);
+// isValidName($inputFirstName);
 
 //ABOVE FUNCTION (isValidName) IS WORKING FINE
 
 
 $form.addEventListener("submit", (e: SubmitEvent) => {
     e.preventDefault();
-    // isValidName($inputFirstName)
+    isValidName($inputFirstName);
 
 
     // input.setCustomValidity('');
